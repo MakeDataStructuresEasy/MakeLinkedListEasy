@@ -1,14 +1,6 @@
-// { Driver Code Starts
-
 #include <bits/stdc++.h>
 using namespace std;
 
-
- // } Driver Code Ends
-
-
-
-// design the class:
 class Node{
     public: 
         int key, val;
@@ -28,8 +20,7 @@ class LRUCache{
         int maxCap;
         
         void addNodeAtFront(Node* node){
-            if(node == NULL) return;
-            
+            if(node == NULL) return;            
             if(front == NULL){
                 front = node;
                 rear = front;
@@ -46,7 +37,7 @@ class LRUCache{
                 front = rear = NULL;
                 return;
             }
-            
+
             if(node -> prev != NULL){
                 node -> prev ->next = node -> next;
             }else{
@@ -112,8 +103,6 @@ class LRUCache{
         }
 };
 
-// { Driver Code Starts.
-
 int main()
 {
     int t;
@@ -150,4 +139,3 @@ int main()
     }
     return 0;
 }
-  // } Driver Code Ends
